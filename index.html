@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trink Timer</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
-    <div>
+    <header>
         <h1>Trink Timer</h1>
+    </header>
+    <div id="timer_wrapper">
         <input id="timer_value" type="text" placeholder="insert minutes">
         <button id='start_timer' onclick={startTimer()}>start</button>
         <button onclick={stopTimer()}>stop</button>
