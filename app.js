@@ -48,5 +48,6 @@ function resetTimer() {
     minutes = 0
     seconds = 0
     timerOutput.innerText = minutes + ' Sekunden'
+    document.getElementById('timer_value').value = null
 }
 
