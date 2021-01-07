@@ -1,6 +1,8 @@
 let minutes = 0  // 2
 let seconds = 0
 let timeInSeconds = 0
+const audio = new Audio('./sounds/Pouring water.m4a');
+audio.play();
 
 const timerOutput = document.getElementById('timer_output')
 let timeInput = document.getElementById('timer_value').value
@@ -9,7 +11,6 @@ let timer
 // reads in document input value as minutes and starts interval update timer
 async function startTimer() {
     clearInterval(timer)
-    
     minutes = document.getElementById('timer_value').value
     seconds = 0
     let promise = new Promise((resolve, reject) => {
@@ -28,6 +29,12 @@ function updateMinutesSeconds() {
     seconds = (timeInSeconds - (minutes * 60))
 }
 
+function timerEnds() {
+    clearInterval(timer)
+    audio.play()
+    alert('Timer abgelaufen')
+}
+
 // counts down the timer and prints timer state to the dom
 function updateTimer() {
     timeInSeconds = ((minutes * 60) + seconds)
@@ -37,8 +44,8 @@ function updateTimer() {
         updateMinutesSeconds()
         timerOutput.innerText = minutes + ' Minuten' + ':' + seconds + ' Sekunden'
     } else {
-        clearInterval(timer)
-        return(alert('Timer abgelaufen'))
+        return(timerEnds())
+        
     }
 }
 
