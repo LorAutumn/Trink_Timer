@@ -2,7 +2,6 @@ let minutes = 0  // 2
 let seconds = 0
 let timeInSeconds = 0
 const audio = new Audio('./sounds/Pouring water.m4a');
-audio.play();
 
 const timerOutput = document.getElementById('timer_output')
 let timeInput = document.getElementById('timer_value').value
