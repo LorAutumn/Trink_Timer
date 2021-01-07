@@ -16,7 +16,7 @@ async function startTimer() {
          })
     if (minutes >= 1 ) {
         timer = setInterval(updateTimer, 1000)
-        } else {
+    } else {
         alert('Die Dauer muss mindestens 1 Minute betragen')
     }
 }
@@ -44,6 +44,15 @@ function updateTimer() {
 // stops the timer
 function stopTimer() {
     clearInterval(timer)
+}
+
+// resumes timer with actual state of minutes and seconds
+function resumeTimer() {
+    if (seconds >= 1 ) {
+        timer = setInterval(updateTimer, 1000)
+        } else {
+        alert('Der Timer ist bereits abgelaufen')
+    }
 }
 
 // resets minutes and seconds values - delets timer value at the dom - clears timer input field
