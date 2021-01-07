@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trink Timer</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,8 +17,14 @@
         <button onclick={stopTimer()}>stop</button>
         <button onclick={resumeTimer()} >resume</button>
         <button onclick={resetTimer()}>reset Timer</button>
+        
         <div id="timer_output"></div>
     </div>
+    <footer>
+        <div id="footer_nav">
+            <p>created by LorAutumn</p>
+        </div>
+    </footer>
     <script type="text/javascript" src="./app.js"></script>
 </body>
 </html>

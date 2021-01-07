@@ -9,6 +9,7 @@ let timer
 // reads in document input value as minutes and starts interval update timer
 async function startTimer() {
     clearInterval(timer)
+    
     minutes = document.getElementById('timer_value').value
     seconds = 0
     let promise = new Promise((resolve, reject) => {

@@ -1,5 +1,12 @@
+* {
+    margin: 10;
+    padding: 0;
+}
+
 body {
+    font-family: 'Mulish', sans-serif;
     background-color: rgb(240, 240, 240);
+    height: 100%;
 }
 
 header {
@@ -19,4 +26,21 @@ h1 {
 #timer_wrapper {
     padding-top: 20px;
     text-align: center;
+}
+
+#timer_output {
+    padding-top: 20px;
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+#footer_nav {
+    position: absolute;
+    bottom: 0;
+    float: left;
+    color: rgb(180, 180, 180)
 }
